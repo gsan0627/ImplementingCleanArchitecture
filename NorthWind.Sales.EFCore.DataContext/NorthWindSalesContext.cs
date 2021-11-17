@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using NorthWind.Entities.POCOs;
 using NorthWind.Sales.Entities.POCOs;
 using System;
 using System.Collections.Generic;
@@ -44,9 +45,6 @@ namespace NorthWind.Sales.EFCore.DataContext
 
             modelBuilder.Entity<OrderDetailt>()
                 .HasKey(od => new { od.OrderId, od.ProductId });
-
-
-
         }
 
     }

@@ -9,9 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="NorthWind.Entities">
-      <HintPath>..\..\NorthWind\NorthWind.Entities\bin\Debug\netcoreapp3.1\NorthWind.Entities.dll</HintPath>
-    </Reference>
+    <ProjectReference Include="..\..\NorthWind\NorthWind.Entities\NorthWind.Entities.csproj" />
   </ItemGroup>
 
 </Project>

@@ -12,7 +12,7 @@ namespace NorthWind.Sales.DTOs.CreateOrder
         Entities.Validators.IValidator<CreateOrderDetailDTO>
     {
 
-        public CreateOrderDetailDtoValidator()
+        public CreateOrderDetailDTOValidator()
         {
             RuleFor(d => d.ProductId).GreaterThan(0)
                 .WithMessage("Debe especificar el identificador del producto");
