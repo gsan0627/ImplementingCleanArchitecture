@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NorthWind.Sales.DTOs\NorthWind.Sales.DTOs.csproj" />
+    <ProjectReference Include="..\NorthWind.Sales.Entities\NorthWind.Sales.Entities.csproj" />
+    <ProjectReference Include="..\NorthWind.Sales.Events\NorthWind.Sales.Events.csproj" />
+    <ProjectReference Include="..\NorthWind.Sales.UseCasesPorts\NorthWind.Sales.UseCasesPorts.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="NorthWind.Entities">
+      <HintPath>..\..\NorthWind\NorthWind.Entities\bin\Debug\netcoreapp3.1\NorthWind.Entities.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
