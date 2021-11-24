@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <OutputType>Exe</OutputType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="appsettings.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NorthWind.Entities\NorthWind.Entities.csproj" />
+    <ProjectReference Include="..\NorthWind.Sales.ConsoleControllers\NorthWind.Sales.ConsoleControllers.csproj" />
+    <ProjectReference Include="..\NorthWind.Sales.Controllers\NorthWind.Sales.Controllers.csproj" />
+    <ProjectReference Include="..\NorthWind.Sales.Events\NorthWind.Sales.Events.csproj" />
+    <ProjectReference Include="..\NorthWind.Sales.Loggers\NorthWind.Sales.Loggers.csproj" />
+    <ProjectReference Include="..\NorthWind.Sales.Mail\NorthWind.Sales.Mail.csproj" />
+    <ProjectReference Include="..\NorthWind.Sales.Repositories.IoC\NorthWind.Sales.Repositories.IoC.csproj" />
+    <ProjectReference Include="..\NorthWind.Sales.UseCases\NorthWind.Sales.UseCases.csproj" />
+  </ItemGroup>
+
+</Project>

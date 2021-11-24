@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NorthWind.Entities\NorthWind.Entities.csproj" />
+    <ProjectReference Include="..\NorthWind.Sales.EFCore.DataContext\NorthWind.Sales.EFCore.DataContext.csproj" />
+    <ProjectReference Include="..\NorthWind.Sales.UseCases\NorthWind.Sales.UseCases.csproj" />
+  </ItemGroup>
+
+</Project>

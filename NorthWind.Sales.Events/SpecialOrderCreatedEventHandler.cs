@@ -12,10 +12,10 @@ namespace NorthWind.Sales.Events
     {
         readonly IMailService _service;
 
-        SpecialOrderCreatedEventHandler(IMailService mailService)
+        public SpecialOrderCreatedEventHandler(IMailService mailService)
             => _service = mailService;
 
-        public ValueTask Handle(SpecialOrderCreatedEvent orderCreated)
+        public Task Handle(SpecialOrderCreatedEvent orderCreated)
         {
             return _service.Send($"Order {orderCreated.OrderId} con {orderCreated.ProductsCount}");
         }

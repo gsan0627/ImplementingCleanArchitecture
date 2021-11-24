@@ -7,6 +7,6 @@ namespace NorthWind.Entities.Interfaces
 {
     public interface IMailService
     {
-        ValueTask Send(string message);
+        Task Send(string message);
     }
 }

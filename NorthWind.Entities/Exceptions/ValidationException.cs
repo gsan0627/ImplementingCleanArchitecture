@@ -1,7 +1,6 @@
 ﻿using NorthWind.Entities.Validators;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Text;
 
 namespace NorthWind.Entities.Exceptions

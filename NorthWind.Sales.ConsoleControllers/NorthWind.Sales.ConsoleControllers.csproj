@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NorthWind.Sales.Console.Views\NorthWind.Sales.Console.Views.csproj" />
+    <ProjectReference Include="..\NorthWind.Sales.Controllers\NorthWind.Sales.Controllers.csproj" />
+  </ItemGroup>
+
+</Project>

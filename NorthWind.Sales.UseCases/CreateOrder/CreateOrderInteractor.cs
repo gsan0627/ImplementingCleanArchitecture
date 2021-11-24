@@ -33,11 +33,12 @@ namespace NorthWind.Sales.UseCases.CreateOrder
             IApplicationStatusLogger logger,
             IEnumerable<NorthWind.Entities.Validators.IValidator<CreateOrderDTO>> validators,
             IEventHub<SpecialOrderCreatedEvent> eventHub,
-            IValidatorService<CreateOrderDTO> validatorService)
-        => (_orderRepository, _logRepository, _unitOfWork, _logger, _Validators, _eventHub, _validatorService)
-            = (orderRepository, logRepository, unitOfWork, logger, validators, eventHub, validatorService);
+            IValidatorService<CreateOrderDTO> validatorService,
+            ICreateOrderOutputPort outputPort)
+        => (_orderRepository, _logRepository, _unitOfWork, _logger, _Validators, _eventHub, _validatorService, _outputPort)
+            = (orderRepository, logRepository, unitOfWork, logger, validators, eventHub, validatorService, outputPort);
 
-        public async ValueTask Handle(CreateOrderDTO order)
+        public async Task Handle(CreateOrderDTO order)
         {
             _validatorService.Validate(order, _Validators, _logger);
 
@@ -65,6 +66,8 @@ namespace NorthWind.Sales.UseCases.CreateOrder
                     new SpecialOrderCreatedEvent(orderAggregate.Id,
                     orderAggregate.OrderDetails.Count));
             }
+
+            await _outputPort.Handle(orderAggregate.Id);
         }
     }
 }

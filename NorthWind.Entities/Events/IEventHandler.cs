@@ -7,6 +7,6 @@ namespace NorthWind.Entities.Events
 {
     public interface IEventHandler<EventType> where EventType : IEvent
     {
-        ValueTask Handle(EventType eventTypeInstance);
+        Task Handle(EventType eventTypeInstance);
     }
 }

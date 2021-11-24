@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NorthWind.Sales.Console.Views\NorthWind.Sales.Console.Views.csproj" />
+    <ProjectReference Include="..\NorthWind.Sales.Controllers\NorthWind.Sales.Controllers.csproj" />
+    <ProjectReference Include="..\NorthWind.Sales.Loggers\NorthWind.Sales.Loggers.csproj" />
+    <ProjectReference Include="..\NorthWind.Sales.Mail\NorthWind.Sales.Mail.csproj" />
+    <ProjectReference Include="..\NorthWind.Sales.Presenters\NorthWind.Sales.Presenters.csproj" />
+    <ProjectReference Include="..\NorthWind.Sales.Repositories.IoC\NorthWind.Sales.Repositories.IoC.csproj" />
+    <ProjectReference Include="..\NorthWind.Sales.UseCases\NorthWind.Sales.UseCases.csproj" />
+    <ProjectReference Include="..\NorthWind.Sales.WebApiControllers\NorthWind.Sales.WebApiControllers.csproj" />
+    <ProjectReference Include="..\NorthWind.Sales.WebExceptionPresenters\NorthWind.Sales.WebExceptionPresenters.csproj" />
+  </ItemGroup>
+
+</Project>

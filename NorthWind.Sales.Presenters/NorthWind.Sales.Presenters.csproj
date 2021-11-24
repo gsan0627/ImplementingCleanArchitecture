@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NorthWind.Sales.UseCasesPorts\NorthWind.Sales.UseCasesPorts.csproj" />
+    <ProjectReference Include="..\NorthWind.Sales.ViewModels\NorthWind.Sales.ViewModels.csproj" />
+  </ItemGroup>
+
+</Project>
